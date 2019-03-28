@@ -12,6 +12,10 @@
 * **That all?**
     * No. You then need to edit the contents of the real driver and add a patch to your config. To streamline and make things faster, I simply removed checks from all the High Sierra driver installers.
     
+# Config Kext Patch
+
+To bypass checks on boot, you need to add a kext patch to your config. See file *DisableDriverCheck.plist*. Add the contents to your config and save it.
+    
 # Patching The Driver
 
 Once you've ran the installer you preffered, *don't* reboot the computer. Just ignore the request to do so. You can't close it, so leave it be.
