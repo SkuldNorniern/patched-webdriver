@@ -10,4 +10,25 @@
     * The package is expanded and a file called `DISTRIBUTION` contains the checks. This check mechanism is removed and the package is flattened again.
 
 * **That all?**
-    * No. You then need to edit the contents of the real driver and add a patch to your config. To streamline and make things faster, I simply removed checks from all the High Sierra driver versions. See here: https://www.reddit.com/r/hackintosh/comments/7sr4vv/nvidia_web_drivers_and_you_a_patching_guide_for/ on how to modify the installed driver.
+    * No. You then need to edit the contents of the real driver and add a patch to your config. To streamline and make things faster, I simply removed checks from all the High Sierra driver installers.
+    
+# Patching The Driver
+
+Once you've ran the installer you preffered, *don't* reboot the computer. Just ignore the request to do so. You can't close it, so leave it be.
+
+1. Navigate to /Library/Extensions/
+2. Right click on *NVDAStartupWeb.kext* and choose *Show package contents*
+3. Go to *Contents* and copy the file *Info.plist* to your dekstop.
+4. Open *Info.plist* with Xcode or your preffered plist editor.
+5. Expand *IOKitPersonalities* > *NVDAStartup*
+6. Edit the value of *NVDARequiredOS* and change it to your current build number.
+    * Tip: If you don't know your Build Number, you can obtain it with Terminal by typing in `sw_vers`
+7. Save the file and place it back in the kext *Contents* folder.
+8. Repair permissions with Terminal
+    * `sudo chmod -Rf 755 /L*/E*`
+    * `sudo chown -Rf 0:0 /L*/E*`
+9. Rebuild kext cache with Terminal
+    * `sudo kextcache -i /`
+10. Click the restart button on the installer.
+
+[*Sourced from reddit*](https://www.reddit.com/r/hackintosh/comments/7sr4vv/nvidia_web_drivers_and_you_a_patching_guide_for/)
