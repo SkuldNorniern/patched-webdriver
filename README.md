@@ -1,3 +1,7 @@
+This is no longer being maintained. A majority of people have moved on to 10.14 or 10.15 with AMD.
+
+---
+
 # Patched NVidia macOS Web Driver Installers
 
 * **Why?**
@@ -36,16 +40,3 @@ Once you've ran the installer you preffered, *don't* reboot the computer. Just i
 10. Click the restart button on the installer.
 
 [*Sourced from reddit*](https://www.reddit.com/r/hackintosh/comments/7sr4vv/nvidia_web_drivers_and_you_a_patching_guide_for/)
-
-
----
-
-
-I realise this is a bit behind. I will add the missing updates on Nov 09 2019
-
-Nvidia Web Driver - 387.10.10.10.40.132
-Nvidia Web Driver - 387.10.10.10.40.131
-Nvidia Web Driver - 387.10.10.10.40.130
-Nvidia Web Driver - 387.10.10.10.40.129
-
-These versions will be added soon.
