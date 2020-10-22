@@ -1,4 +1,5 @@
-This is no longer being maintained. A majority of people have moved on to 10.14 or 10.15 with AMD.
+:warning: **This is no longer being maintained. A majority of people have moved on to newer versions with AMD GPUs or using the iGPU.** :warning:
+If you need to, clone or download this repo. It will be deleted January 1st 2021.
 
 ---
 
@@ -8,7 +9,7 @@ This is no longer being maintained. A majority of people have moved on to 10.14 
     * Because NVidia installers check the current macOS version and build number before installing
 
 * **What for?**
-    * This probably for compatability reasons. However, this isn't always the case.
+    * This is probably for compatability reasons. However, this isn't always the case.
 
 * **How?**
     * The package is expanded and a file called `DISTRIBUTION` contains the checks. This check mechanism is removed and the package is flattened again.
